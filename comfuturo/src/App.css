@@ -4,9 +4,10 @@
   font-family: sans-serif;
 }
 
-.title{
+.app{
   size: 50px;
   display: flex;
   align-items: center;
+  color: red;
   
 }

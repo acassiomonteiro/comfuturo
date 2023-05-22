@@ -5,8 +5,8 @@ import './App.css'
 function App() {
 
   return (
-    <div className="app">
-      <h1> Com futuro</h1>
+    <div className="text-3xl font-bold underline">
+      <h1> Olá Mundo</h1>
       <home />
 
     </div>

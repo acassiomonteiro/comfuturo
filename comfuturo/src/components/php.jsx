@@ -24,5 +24,39 @@ function App() {
       .catch((error) => console.error(error));
   };
 
+  return (
+    <div>
+      <h1>Registro</h1>
+      <input
+        type="text"
+        placeholder="Nome de usuário"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Senha"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button onClick={handleRegister}>Registrar</button>
+
+      <h1>Login</h1>
+      <input
+        type="text"
+        placeholder="Nome de usuário"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Senha"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button onClick={handleLogin}>Login</button>
+    </div>
+  );
+}
 
 export default App;

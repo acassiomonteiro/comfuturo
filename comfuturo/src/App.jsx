@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Cursos from './pages/Cursos'
 import Sobre from './pages/Sobre'
 import Login from './pages/Login'
-import Cadastro from './pages/Cadastro'
+import Cadastro from './pages/Register'
 import Linguistica from './pages/Linguistica'
 
 function App() {

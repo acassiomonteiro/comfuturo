@@ -10,7 +10,7 @@ const Cadastro = () => {
     e.preventDefault();
 
     try {
-      await axios.post('/api/Cadastro', { name, email, password });
+      await axios.post('/api/register', { name, email, password });
       alert('Cadastro realizado com sucesso!');
     } catch (error) {
       console.error(error);
@@ -34,6 +34,7 @@ const Cadastro = () => {
                                         type="text"
                                         name="name"
                                         placeholder="Escreva o seu nome completo"
+                                        id="name"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
@@ -48,6 +49,7 @@ const Cadastro = () => {
                                         type="email"
                                         name="email"
                                         placeholder="Digite o seu e-email para começar"
+                                        id="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
@@ -62,6 +64,7 @@ const Cadastro = () => {
                                         type="password"
                                         name="senha"
                                         placeholder="Coloque sua senha"
+                                        id="password"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
@@ -120,4 +123,4 @@ const Cadastro = () => {
   )
 }
 
-export default Cadastro
+export default Cadastro;

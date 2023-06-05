@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await axios.post('/api/Login', { email, password });
+      await axios.post('/api/login', { email, password });
       alert('Login realizado com sucesso!');
     } catch (error) {
       console.error(error);

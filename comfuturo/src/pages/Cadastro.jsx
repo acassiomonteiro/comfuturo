@@ -1,5 +1,23 @@
-function Cursos() {
-  return (
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const Cadastro = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post('/api/Cadastro', { name, email, password });
+      alert('Cadastro realizado com sucesso!');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+  return (  
 <section class="bg-white">
 
             <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 mt-0 ">
@@ -7,7 +25,7 @@ function Cursos() {
                      <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Criar sua conta na ComFuturo.</h2>
                     <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
 
-                    <form action="#" method="POST" class="mt-12">
+                    <form onSubmit={handleSubmit} action="#" method="POST" class="mt-12">
                         <div class="space-y-5">
                             <div>
                                 <label for="" class="text-base font-medium text-gray-900"> Nome completo </label>
@@ -15,8 +33,9 @@ function Cursos() {
                                     <input
                                         type="text"
                                         name="name"
-                                        id="name"
                                         placeholder="Escreva o seu nome completo"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -28,8 +47,9 @@ function Cursos() {
                                     <input
                                         type="email"
                                         name="email"
-                                        id="email"
                                         placeholder="Digite o seu e-email para começar"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -41,8 +61,9 @@ function Cursos() {
                                     <input
                                         type="password"
                                         name="senha"
-                                        id="senha"
                                         placeholder="Coloque sua senha"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -99,4 +120,4 @@ function Cursos() {
   )
 }
 
-export default Cursos
+export default Cadastro

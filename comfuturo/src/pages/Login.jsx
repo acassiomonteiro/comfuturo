@@ -1,4 +1,21 @@
-function Cursos() {
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post('/api/Login', { email, password });
+      alert('Login realizado com sucesso!');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
   return (
     <section class="bg-white">
 
@@ -9,7 +26,7 @@ function Cursos() {
                         <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Entre na sua Conta</h2>
                         <p class="mt-3 text-base text-gray-600 text-center">Não possui contra? faça o seu <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Cadastro</a></p>
 
-                        <form action="#" method="GET" class="mt-12">
+                        <form onSubmit={handleSubmit} action="#" method="GET" class="mt-12">
                             <div class="space-y-5">
 
                                 <div>
@@ -18,8 +35,9 @@ function Cursos() {
                                         <input
                                             type="email"
                                             name="email"
-                                            id="email"
                                             placeholder="Digite o seu e-email para começar"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                             class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                         />
                                     </div>
@@ -31,8 +49,9 @@ function Cursos() {
                                         <input
                                             type="password"
                                             name="senha"
-                                            id="senha"
                                             placeholder="Coloque sua senha"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
                                             class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                         />
                                     </div>
@@ -83,4 +102,4 @@ function Cursos() {
   )
 }
 
-export default Cursos
+export default Login

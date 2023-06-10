@@ -1,6 +1,6 @@
 import { ArrowDown01Icon, ArrowDownCircle } from "lucide-react";
 import Bg1 from "../img/banner.svg";
-import Bg2 from "../img/responda.svg";
+import Bg2 from "../img/Responda.svg";
 
 function Home() { 
   return (
@@ -43,30 +43,40 @@ function Home() {
 
 
 
-                    <a href="#" title="" class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-purple-600 rounded-lg lg:mt-16 hover:bg-purple-900 focus:bg-purple-900" role="button">
+                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-purple-600 rounded-lg lg:mt-16 hover:bg-purple-900 focus:bg-purple-900" role="button">
                         Teste agora!
                     </a>
-                    <a href="#" title="" class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black" role="button">
+                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black" role="button">
                         <ArrowDownCircle/> Saiba mais
-                    </a>
-
-                    <div class="grid grid-rows-3 grid-flow-col gap-4">
-                        <div class="row-span-3 ...">01</div>
-                        <div class="col-span-2 ...">02</div>
-                        <div class="row-span-2 col-span-2 ...">03</div>
-                    </div>
-                     
-
-
-                    
+                    </a>                   
                 </div>
-
-                <img src={Bg1} class="scale-150" alt="" />
-
+                <img src={Bg1} className="scale-150" alt="" />
             </div>
         </div>
     </section>
+    <div className="relative w-full h-80 left-0 -top-6 bg-[#9874FF]">
+        <h1 className="text-white font-bold text-4xl text-center">Conheça o passo a passo do teste vocacional:</h1>
+
+        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-20 left-72 rounded-2xl">
+            <div className="container">
+                <div className="grid grid-cols-2 md:grid-cols-2">
+                <div className="col-span-1">
+                    <img src={Bg2} className="scale-110" alt=""/>
+                </div>
+                <div className="col-span-1">
+                    <div className="">
+                    <h2 className="font-semibold text-3xl">Responda às perguntas</h2>
+                    <p className="font-normal text-xl">Primeiro, responda às situações que o teste propõe de acordo com seu grau de interesse. A forma como você reage às atividades ajuda a moldar seu perfil.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
+
 
   )
 }

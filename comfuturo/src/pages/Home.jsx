@@ -3,6 +3,7 @@ import Bg1 from "../img/banner.svg";
 import Bg2 from "../img/Responda.svg";
 import Bg3 from "../img/perfil.svg";
 import Bg4 from "../img/profissão.svg";
+import Bg5 from "../img/10min.svg";
 
 function Home() { 
   return (
@@ -59,7 +60,7 @@ function Home() {
     <div className="relative w-full h-80 left-0 -top-6 bg-[#9874FF]">
         <h1 className="relative text-white font-bold text-4xl text-center">Conheça o passo a passo do teste vocacional:</h1>
 
-        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-20 left-72 rounded-2xl">
+        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-20 left-72 rounded-2xl flex justify-center">
                 <div className="grid grid-cols-2 md:grid-cols-2">
                 <div className="col-span-1">
                     <img src={Bg2} className="scale-110" alt=""/>
@@ -74,7 +75,7 @@ function Home() {
             </div>
     </div>
     <div className="relative w-full h-80 left-0 -top-6 bg-[#9874FF]">
-        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-10 left-72 rounded-2xl">
+        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-10 left-72 rounded-2xl flex justify-center">
                 <div className="grid grid-cols-2 md:grid-cols-2">
                 <div className="col-span-1">
                     <img src={Bg3} className="scale-100 ml-5 -mt-4" alt=""/>
@@ -89,7 +90,7 @@ function Home() {
             </div>
     </div>
     <div className="relative w-full h-80 left-0 -top-6 bg-[#9874FF]">
-        <div className="absolute p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-2 left-72 rounded-2xl">
+        <div className="relative p-10 bg-violet-900 text-white  w-4/6 h-4/6 top-2 left-72 rounded-2xl flex justify-center">
                 <div className="grid grid-cols-2 md:grid-cols-2">
                 <div className="col-span-1">
                     <img src={Bg4} className="scale-110 -mt-3" alt=""/>
@@ -103,6 +104,21 @@ function Home() {
                 </div>
             </div>
     </div>
+
+    <div>
+      <h2 className="text-center font-semibold text-4xl mt-32">Responda a um questionário de <span className="text-violet-500"><br />10 minutos e veja na hora os seguintes resultados:</span></h2>
+
+      <div>
+        <img src={Bg5} className="ml-auto scale-75" alt="" />
+      </div>
+
+      <div>
+        <h2 className="font-bold">PROFISSÕES QUE MAIS COMBINAM COM VOCÊ</h2>
+        <p></p>
+      </div>
+
+    </div>
+
 </div>
 
 

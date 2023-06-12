@@ -1,4 +1,4 @@
-import { ArrowDown01Icon, ArrowDownCircle } from "lucide-react";
+import { ArrowDown01Icon, ArrowDownCircle, CheckCircle } from "lucide-react";
 import Bg1 from "../img/banner.svg";
 import Bg2 from "../img/Responda.svg";
 import Bg3 from "../img/perfil.svg";
@@ -108,14 +108,26 @@ function Home() {
     <div>
       <h2 className="text-center font-semibold text-4xl mt-32">Responda a um questionário de <span className="text-violet-500"><br />10 minutos e veja na hora os seguintes resultados:</span></h2>
 
-      <div>
-        <img src={Bg5} className="ml-auto scale-75" alt="" />
-      </div>
+      <div className="grid grid-rows-4 grid-flow-col gap-1">
+        <div className="row-span-2 ...">
+            <h2 className="relative font-bold left-96 mt-16">PROFISSÕES QUE MAIS COMBINAM COM VOCÊ</h2>
+            <p className="relative font-medium max-w-sm ml-96 mt-8">
+A partir da experiência do Com Futuro em ajudar os estudantes a se prepararem para o ENEM e encontrarem a tão sonhada universidade, nossa equipe fez um longo estudo para identificar quais cursos e profissões combinam mais com cada perfil de pessoa.</p>
 
-      <div>
-        <h2 className="font-bold">PROFISSÕES QUE MAIS COMBINAM COM VOCÊ</h2>
-        <p></p>
-      </div>
+            <h2 className="relative font-bold left-96 mt-8 text-violet-500 max-w-sm">O RAIO-X do Com Futuro não é um simples teste vocacional.</h2>
+            <p className="relative font-medium max-w-sm ml-96 mt-8">
+            O seu grande diferencial é possibilitar que, primeiro, a pessoa se conheça melhor, seus pontos fortes, pontos de melhorias, seus medos e como se relaciona com outras pessoas, para depois sugerir as profissões que mais combinam.</p>
+
+        </div>
+
+        <div className="col-span-2 ..."><h2 className="relative font-bold left-96 -mt-60 text-violet-500">Nessa etapa você vai descobrir:</h2>
+        
+        <p className="flex items-center gap-3 text font-semibold ml-96 mt-4"><CheckCircle/>Quais são as profissões mais indicadas para o seu perfil</p>
+        <p className="flex items-center gap-3 text font-semibold ml-96 mt-4"><CheckCircle/>Qual o salário médio de cada uma dessas profissões</p>
+
+        </div>
+        <div className="row-span-2 col-span-2 ..."><img src={Bg5} className="ml-auto scale-75" alt="" /></div>
+    </div>
 
     </div>
 

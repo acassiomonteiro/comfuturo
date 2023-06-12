@@ -1,42 +1,173 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-const Cadastro = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Register() {
+    const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");
+    const [pass1, setPass1] = useState("");
+    const [pass2, setPass2] = useState("");
+    const [error, setError] = useState("");
+    const [msg, setMsg] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    useEffect(() => {
+        setTimeout(function(){
+            setMsg("");
+        }, 15000);
+    }, [msg]);
 
-    try {
-      await axios.post('/api/register', { name, email, password });
-      alert('Cadastro realizado com sucesso!');
-    } catch (error) {
-      console.error(error);
+    const handleInputChange = (e, type) => {
+        switch(type){
+            case "user":
+                setError("");
+                setUser(e.target.value);
+                if(e.target.value === ""){
+                    setError("Username has left blank!");
+                }
+                break;
+            case "email":
+                setError("");
+                setEmail(e.target.value);
+                if(e.target.value === ""){
+                    setError("Email has left blank!");
+                }
+                break;
+            case "pass1":
+                setError("");
+                setPass1(e.target.value);
+                if(e.target.value === ""){
+                    setError("Password has left blank!");
+                }
+                break;
+            case "pass2":
+                setError("");
+                setPass2(e.target.value);
+                if(e.target.value === ""){
+                    setError("Confirm password has left blank!");
+                }
+                else if(e.target.value !== pass1){
+                    setError("Confirm password does not match!")
+                }
+                break;
+            default:
+        }
     }
-  };
-  
-  return (  
-<section class="bg-white">
+
+    function handleSubmit(){
+        if(user !== "" && email !== "" && pass1 !== "" && pass2 !== ""){
+            var url = "http://localhost/react/register.php";
+            var headers = {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            };
+            var Data = {
+                user: user,
+                email: email,
+                pass: pass2
+            }
+            fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(Data)
+            }).then((response) => response.json())
+            .then((response) => {
+                setMsg(response[0].result);
+            }).catch((err) =>{
+                setError(err);
+                console.log(err);
+            });
+            setUser("");
+            setEmail("");
+            setPass1("");
+            setPass2("");
+        }
+        else{
+            setError("All fields are required!");
+        }
+    }
+
+    function checkUser(){
+        var url = "http://localhost/react/checkuser.php";
+        var headers = {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        };
+        var Data = {
+            user: user
+        }
+        fetch(url, {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(Data)
+        }).then((response) => response.json())
+        .then((response) => {
+            setError(response[0].result);
+        }).catch((err) =>{
+            setError(err);
+            console.log(err);
+        });
+    }
+
+    function checkEmail(){
+        var url = "http://localhost/react/checkemail.php";
+        var headers = {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        };
+        var Data = {
+            email: email
+        }
+        fetch(url, {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(Data)
+        }).then((response) => response.json())
+        .then((response) => {
+            setError(response[0].result);
+        }).catch((err) =>{
+            setError(err);
+            console.log(err);
+        });
+    }
+
+    function checkPassword(){
+        if(pass1.length < 8){
+            setError("Password is less than 8 characters!")
+        }
+    }
+
+
+
+
+  return (
+    <section class="bg-white">
 
             <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 mt-0 ">
                 <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
                      <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Criar sua conta na ComFuturo.</h2>
                     <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
 
-                    <form onSubmit={handleSubmit} action="#" method="POST" class="mt-12">
+                    <form class="mt-12">
                         <div class="space-y-5">
                             <div>
+                                
+                                <p>
+                                {
+                                        msg !== "" ?
+                                        <span className="success">{msg}</span> :
+                                        <span className="error">{error}</span>
+                                }
+                                </p>
+
+
+
                                 <label for="" class="text-base font-medium text-gray-900"> Nome completo </label>
                                 <div class="mt-2.5">
                                     <input
                                         type="text"
-                                        name="name"
+                                        name="user"
                                         placeholder="Escreva o seu nome completo"
-                                        id="name"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
+                                        value={user}
+                                        onChange={(e) => handleInputChange(e, "user")}
+                                        onBlur={checkUser}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -49,9 +180,9 @@ const Cadastro = () => {
                                         type="email"
                                         name="email"
                                         placeholder="Digite o seu e-email para começar"
-                                        id="email"
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        onChange={(e) => handleInputChange(e, "email")}
+                                        onBlur={checkEmail}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -62,11 +193,25 @@ const Cadastro = () => {
                                 <div class="mt-2.5">
                                     <input
                                         type="password"
-                                        name="senha"
+                                        name="pass1"
                                         placeholder="Coloque sua senha"
-                                        id="password"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={pass1}
+                                        onChange={(e) => handleInputChange(e, "pass1")}
+                                        onBlur={checkPassword}
+                                        class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="" class="text-base font-medium text-gray-900"> Confirme sua enha </label>
+                                <div class="mt-2.5">
+                                    <input
+                                        type="password"
+                                        name="pass2"
+                                        placeholder="Repita sua senha"
+                                        value={pass2}
+                                        onChange={(e) => handleInputChange(e, "pass2")}
                                         class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                     />
                                 </div>
@@ -81,7 +226,12 @@ const Cadastro = () => {
                             </div>
 
                             <div>
-                                <button type="submit" class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700">
+                                <button
+                                type="submit"
+                                defaultValue="Submit"
+                                className="button"
+                                onClick={handleSubmit}
+                                class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700">
                                 Criar conta gratuita
                                 </button>
                             </div>
@@ -119,8 +269,7 @@ const Cadastro = () => {
                 </div>
             </div>
 </section>
-
   )
 }
 
-export default Cadastro;
+export default Register

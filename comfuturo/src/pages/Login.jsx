@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login(){
     const naviget = useNavigate();
-    const [user, setUser] = useState("");
+    const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [error, setError] = useState("");
     const [msg, setMsg] = useState("");
@@ -28,9 +28,9 @@ function Login(){
 
     const handleInputChange = (e, type) => {
         switch(type){
-            case "user":
+            case "email":
                 setError("");
-                setUser(e.target.value);
+                setEmail(e.target.value);
                 if(e.target.value === ""){
                     setError("Username has left blank");
                 }
@@ -47,14 +47,14 @@ function Login(){
     }
 
     function loginSubmit(){
-        if(user !== "" && pass != ""){
+        if(email !== "" && pass != ""){
             var url = "http://localhost/react/login.php";
             var headers = {
                 "Accept": "application/json",
                 "Content-type": "application/json"
             };
             var Data = {
-                user: user,
+                email: email,
                 pass: pass
             };
             fetch(url, {
@@ -112,7 +112,7 @@ function Login(){
                                             name="email"
                                             placeholder="Digite o seu e-email para começar"
                                             value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            onChange={(e) => handleInputChange(e, "email")}
                                             class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                         />
                                     </div>
@@ -125,15 +125,20 @@ function Login(){
                                             type="password"
                                             name="senha"
                                             placeholder="Coloque sua senha"
-                                            value={password}
-                                            onChange={(e) => setPassword(e.target.value)}
+                                            value={pass}
+                                            onChange={(e) => handleInputChange(e, "pass")}
                                             class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <button type="submit" class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700">
+                                    <button
+                                    type="submit"
+                                    defaultValue="Login" 
+                                    className="button"
+                                    onClick={loginSubmit}
+                                    class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700">
                                     Entrar
                                     </button>
                                 </div>

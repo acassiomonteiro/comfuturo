@@ -4,7 +4,7 @@
     header("Access-Control-Allow-Methods: GET, POST");
     header("Access-Control-Allow-Headers: Content-Type");
 
-    $conn = new mysqli("localhost", "comfuturo-user", "1234", "users");
+    $conn = new mysqli("localhost", "comfuturo-user", "1234", "user");
     if(mysqli_connect_error()){
         echo mysqli_connect_error();
         exit();

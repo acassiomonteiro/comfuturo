@@ -6,6 +6,7 @@ import Sobre from './pages/Sobre'
 import Login from './pages/Login'
 import Cadastro from './pages/Register'
 import Linguistica from './pages/Linguistica'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/cursos" element={<Cursos/>}/>
         <Route path="/sobre" element={<Sobre/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/cadastro" element={<Cadastro/>}/>
         <Route path="/linguistica" element={<Linguistica/>}/>
       </Routes>

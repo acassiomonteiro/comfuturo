@@ -1,21 +1,88 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Login(){
+    const naviget = useNavigate();
+    const [user, setUser] = useState("");
+    const [pass, setPass] = useState("");
+    const [error, setError] = useState("");
+    const [msg, setMsg] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    useEffect(() => {
+        let login = localStorage.getItem("login");
+        if(login){
+            naviget("/dashboard");
+        }
+        let loginStatus = localStorage.getItem("loginStatus");
+        if(loginStatus){
+            setError(loginStatus);
+            setTimeout(function(){
+                localStorage.clear();
+                window.location.reload();
+            }, 3000);
+        }
+        setTimeout(function(){
+            setMsg("");
+        }, 5000);
+    }, [msg]);
 
-    try {
-      await axios.post('/api/login', { email, password });
-      alert('Login realizado com sucesso!');
-    } catch (error) {
-      console.error(error);
+    const handleInputChange = (e, type) => {
+        switch(type){
+            case "user":
+                setError("");
+                setUser(e.target.value);
+                if(e.target.value === ""){
+                    setError("Username has left blank");
+                }
+                break;
+            case "pass":
+                setError("");
+                setPass(e.target.value);
+                if(e.target.value === ""){
+                    setError("Password has left blank");
+                }
+                break;
+            default:
+        }
     }
-  };
-  
+
+    function loginSubmit(){
+        if(user !== "" && pass != ""){
+            var url = "http://localhost/react/login.php";
+            var headers = {
+                "Accept": "application/json",
+                "Content-type": "application/json"
+            };
+            var Data = {
+                user: user,
+                pass: pass
+            };
+            fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(Data)
+            }).then((response) => response.json())
+            .then((response) => {
+                if(response[0].result === "Invalid username!" || response[0].result === "Invalid password!"){
+                    setError(response[0].result);
+                }
+                else{
+                    setMsg(response[0].result);
+                    setTimeout(function(){
+                        localStorage.setItem("login", true);
+                        naviget("/dashboard");
+                    }, 5000);
+                }
+            }).catch((err) => {
+                setError(err);
+                console.log(err);
+            })
+        }
+        else{
+            setError("All field are required!")
+        }
+    }
+
   return (
     <section class="bg-white">
 
@@ -26,8 +93,16 @@ const Login = () => {
                         <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Entre na sua Conta</h2>
                         <p class="mt-3 text-base text-gray-600 text-center">Não possui contra? faça o seu <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Cadastro</a></p>
 
-                        <form onSubmit={handleSubmit} action="#" method="GET" class="mt-12">
+                        <form class="mt-12">
                             <div class="space-y-5">
+
+                            <p>
+                            {
+                            error !== "" ?
+                            <span className="error">{error}</span> :
+                            <span className="success">{msg}</span>
+                            }
+                             </p>
 
                                 <div>
                                     <label for="" class="text-base font-medium text-gray-900"> Endereço de email </label>

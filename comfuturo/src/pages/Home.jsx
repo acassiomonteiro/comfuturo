@@ -1,9 +1,10 @@
-import { ArrowDown01Icon, ArrowDownCircle, CheckCircle } from "lucide-react";
+import { ArrowDown01Icon, ArrowDownCircle, CheckCircle, Instagram } from "lucide-react";
 import Bg1 from "../img/banner.svg";
 import Bg2 from "../img/Responda.svg";
 import Bg3 from "../img/perfil.svg";
 import Bg4 from "../img/profissão.svg";
 import Bg5 from "../img/10min.svg";
+import Bg6 from "../img/analise-completa.svg";
 
 function Home() { 
   return (
@@ -120,15 +121,34 @@ A partir da experiência do Com Futuro em ajudar os estudantes a se prepararem p
 
         </div>
 
-        <div className="col-span-2 ..."><h2 className="relative font-bold left-96 -mt-60 text-violet-500">Nessa etapa você vai descobrir:</h2>
+        <div className="col-span-2 ...">
+            <h2 className="relative font-bold left-96 -mt-60 text-violet-500">Nessa etapa você vai descobrir:</h2>
         
         <p className="flex items-center gap-3 text font-semibold ml-96 mt-4"><CheckCircle/>Quais são as profissões mais indicadas para o seu perfil</p>
         <p className="flex items-center gap-3 text font-semibold ml-96 mt-4"><CheckCircle/>Qual o salário médio de cada uma dessas profissões</p>
 
         </div>
         <div className="row-span-2 col-span-2 ..."><img src={Bg5} className="ml-auto scale-75" alt="" /></div>
+        </div>
     </div>
 
+    <div class="grid grid-rows-3 grid-flow-col gap -mt-96">
+        <div class="row-span-3 ...">
+           <img src={Bg6} className="ml-56 scale-75 -mt-96" alt="" />
+        </div>
+        <div class="col-span-2 ... -mt-96 -ml-96">
+            <h2 className="relative font-bold left-96 mt-16">UMA ANÁLISE COMPLETA DO SEU PERFIL</h2>
+            <p className="relative font-medium max-w-sm ml-96 mt-8">
+A partir de uma conceituada metodologia, chamada DISC, utilizada por empresas no processo de contratação de seus funcionários, você entenderá melhor a seu respeito, seus pontos fortes e quais áreas precisam ser aprimoradas para que você alcance sucesso
+na sua vida pessoal e profissional.</p>
+        </div>
+        <div class="row-span-2 col-span-2 ... -ml-50">
+        <h2 className="relative font-bold left-90 -mt-44 text-violet-500">Nessa etapa você vai descobrir:</h2>
+        
+        <p className="flex items-center gap-3 text font-semibold left-90 mt-4"><CheckCircle/>Quais são as profissões mais indicadas para o seu perfil</p>
+        <p className="flex items-center gap-3 text font-semibold left-90 mt-4"><CheckCircle/>Qual o salário médio de cada uma dessas profissões</p>
+
+        </div>
     </div>
 
 </div>

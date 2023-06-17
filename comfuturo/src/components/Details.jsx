@@ -20,7 +20,7 @@ export function Details () {
         <div className="text-center ">
         <h1 className="font-bold text-5xl p-16">Perguntas frequentes</h1>
 
-        <div className="font-normal text-xl text-left ml-96">
+        <div className="font-normal text-xl text-left ml-96 divide-y">
         <details className="mb-10">
             <summary className="font-bold text-xl flex items-center " onClick={() => alternarExibicao(1)}>
                 {exibirConteudo[1] ? (

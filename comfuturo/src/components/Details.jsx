@@ -15,8 +15,9 @@ export function Details () {
     };
 
     return (
-
-        <div className="text-center mt-32">
+        
+        <div className="my-32">
+        <div className="text-center ">
         <h1 className="font-bold text-5xl p-16">Perguntas frequentes</h1>
 
         <div className="font-normal text-xl text-left ml-96">
@@ -30,7 +31,7 @@ export function Details () {
                 O que é um teste vocacional?
             </summary>
             <p>Bateu aquela dúvida sobre qual carreira seguir e qual faculdade prestar? O teste vocacional é uma ferramenta que ajuda<br/> estudantes a descobrir suas aptidões e seu tipo de personalidade, avaliando habilidades, nível de percepção, raciocínio e<br/> memória.
-<br/>Fácil de ser realizado, o teste vocacional é amplamente utilizado por estudantes que não sabem qual carreira seguir ou têm<br/>dúvidas sobre o melhor curso de acordo com suas habilidades.</p>
+            <br/>Fácil de ser realizado, o teste vocacional é amplamente utilizado por estudantes que não sabem qual carreira seguir ou têm<br/>dúvidas sobre o melhor curso de acordo com suas habilidades.</p>
         </details>
 
         <details className="mb-10">
@@ -74,7 +75,7 @@ export function Details () {
               Como saber a profissão que combina comigo?</summary>
         </details>
         
-        <details className="mb-10">
+        <details className="">
             <summary className="font-bold text-xl flex items-center " onClick={() => alternarExibicao(6)}>
             {exibirConteudo[6] ? (
                      <PlusCircle className="mr-2 text-violet-500" />
@@ -85,6 +86,7 @@ export function Details () {
 
         </details>
 
+        </div>
         </div>
         
     </div>

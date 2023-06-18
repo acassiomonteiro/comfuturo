@@ -1,7 +1,7 @@
 import { ArrowDownCircle } from "lucide-react";
 import Bg1 from "../img/banner.svg";
 import { Details } from "../components/Details";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 import { Informação1 } from "../components/informação1";
 import { Informação2 } from "../components/Informação2";
 

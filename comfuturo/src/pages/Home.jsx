@@ -16,7 +16,7 @@ function Home() {
                     <h1 className="mt-4 text-4x1 font-bold text-black lg:mt-8 sm:text-6xl xl:text-7xl">Qual carreira dá<br/> match comigo?</h1>
                     
                     <div className="flex flex-nowrap">
-                    <div className="flex -space-x-4 overflow-hidden mt-14 w-1/2">
+                    <div className="flex -space-x-4 overflow-hidden mt-14 w-1/3">
                         <img
                         className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
                         src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -40,20 +40,22 @@ function Home() {
                     </div>
 
                     <div className="ml-1 mt-3 ">
-                    <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Junte-se a mais de 1000 estudantes e descubra qual carreira combina com você!.</p>
+                    <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Junte-se a mais de <strong>1000 estudantes</strong> e descubra qual carreira combina com você!.</p>
                     </div>
                     </div>
 
 
 
-                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-purple-600 rounded-lg lg:mt-16 hover:bg-purple-900 focus:bg-purple-900" role="button">
+                    <a href="#" title="" className="inline-flex items-center px-16 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-500 rounded-lg lg:mt-16 hover:bg-violet-700 focus:bg-violet-700" role="button">
                         Teste agora!
                     </a>
-                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black" role="button">
-                        <ArrowDownCircle/> Saiba mais
-                    </a>                   
+                    {/*
+                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-10 font-semibold text-black" role="button">
+                    <ArrowDownCircle/> Saiba mais
+                    </a>
+                    */}
                 </div>
-                <img src={Bg1} className="scale-[2]" alt="" />
+                <img src={Bg1} className="scale-[2.1]" alt="" />
             </div>
         </div>
     </section>

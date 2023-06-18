@@ -6,6 +6,7 @@ import Sobre from './pages/Sobre'
 import Login from './pages/Login'
 import Cadastro from './pages/Register'
 import Linguistica from './pages/Linguistica'
+import Politica from './pages/Policy'
 
 import Dashboard from './pages/Dashboard'
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/cadastro" element={<Cadastro/>}/>
         <Route path="/linguistica" element={<Linguistica/>}/>
+        <Route path="/politica-de-privacidade" element={<Politica/>}/>
       </Routes>
     </>
   )

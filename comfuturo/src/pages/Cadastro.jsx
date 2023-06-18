@@ -5,7 +5,7 @@ function Cursos() {
             <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 mt-0 ">
                 <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
                      <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Criar sua conta na ComFuturo.</h2>
-                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
+                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="/login" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
 
                     <form action="#" method="POST" class="mt-12">
                         <div class="space-y-5">

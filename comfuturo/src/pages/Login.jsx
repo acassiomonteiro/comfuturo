@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Login(){
     const naviget = useNavigate();
@@ -91,7 +92,7 @@ function Login(){
                 <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 va-midle ">
                     <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
                         <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Entre na sua Conta</h2>
-                        <p class="mt-3 text-base text-gray-600 text-center">Não possui contra? faça o seu <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Cadastro</a></p>
+                        <p class="mt-3 text-base text-gray-600 text-center">Não possui contra? faça o seu <a href="/cadastro" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Cadastro</a></p>
 
                         <form class="mt-12">
                             <div class="space-y-5">

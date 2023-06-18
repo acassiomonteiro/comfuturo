@@ -143,7 +143,7 @@ function Register() {
             <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 mt-0 ">
                 <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
                      <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Criar sua conta na ComFuturo.</h2>
-                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="#" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
+                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="/login" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
 
                     <form class="mt-12">
                         <div class="space-y-5">
@@ -221,7 +221,7 @@ function Register() {
                                 <input type="checkbox" name="agree" id="agree" class="w-5 h-5 text-blue-600 bg-white border-gray-200 rounded" />
 
                                 <label for="agree" class="ml-3 text-sm font-medium text-gray-500">
-                                 Eu concordo com <a href="#" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Termos de Serviço</a> e <a href="#" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Política de Privacidade</a> <a>da ComFuturo</a>
+                                 Eu concordo com <a href="#" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Termos de Serviço</a> e <a href="/politica-de-privacidade" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Política de Privacidade</a> <a>da ComFuturo</a>
                                 </label>
                             </div>
 

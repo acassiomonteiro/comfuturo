@@ -78,11 +78,11 @@ export function Informação2 () {
 
      {/*quarta parte da informação*/}
 
-     <div className="flex flex-col ... bg-violet-600 w-12/12 h-96 left-0 -top-6">
-        <div className="relative text-center text-white text-3xl font-semibold top-10">O Teste Vocacional da Com Futuro te ajudará<br/>a ter uma vida mais feliz!</div>
-        <div className="relative text-center text-white text-xl font-normal top-20">Não existe nada pior do que a frustração de trabalhar em algo que não ama,<br/> nós vamos te ajudar a descobrir exatamente o que combina com você. Agora<br/> queremos ajudar você a escolher a profissão certa e ter uma vida mais feliz.</div>
-        <div className="flex justify-center">
-        <a href="#" title="" className="inline-flex items-center px-32 py-4 mt-8 font-semibold text-xl text-white transition-all duration-200 bg-black rounded-lg lg:mt-32 hover:bg-white hover:text-black focus:bg-black " role="button">
+     <div className="flex flex-col ... bg-violet-600 w-12/12 h-[30rem] left-0 -top-6">
+        <div className="relative text-center text-white text-3xl font-semibold top-20">O Teste Vocacional da Com Futuro te ajudará<br/>a ter uma vida mais feliz!</div>
+        <div className="relative text-center text-white text-xl font-normal top-28">Não existe nada pior do que a frustração de trabalhar em algo que não ama,<br/> nós vamos te ajudar a descobrir exatamente o que combina com você. Agora<br/> queremos ajudar você a escolher a profissão certa e ter uma vida mais feliz.</div>
+        <div className="flex justify-center mt-10">
+        <a href="#" title="" className="inline-flex items-center px-32 py-4 mt-8 font-semibold text-xl text-white transition-all duration-200 bg-violet-950 rounded-lg lg:mt-32 hover:bg-white hover:text-black focus:bg-black " role="button">
         Fazer o teste agora!
         </a>
         </div>

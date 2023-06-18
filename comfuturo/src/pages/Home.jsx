@@ -10,7 +10,7 @@ function Home() {
     <div className="bg-white">
     <section className="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+            <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 py-[125px]">
                 <div>
                     <p className="text-base font-semibold tracking-wider text-purple-600 uppercase">Venha descobrir qual carreira combina com você!</p>
                     <h1 className="mt-4 text-4x1 font-bold text-black lg:mt-8 sm:text-6xl xl:text-7xl">Qual carreira dá<br/> match comigo?</h1>
@@ -39,7 +39,7 @@ function Home() {
                         />
                     </div>
 
-                    <div className="ml-32 w-2/1">
+                    <div className="ml-1 mt-3 ">
                     <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Junte-se a mais de 1000 estudantes e descubra qual carreira combina com você!.</p>
                     </div>
                     </div>
@@ -53,7 +53,7 @@ function Home() {
                         <ArrowDownCircle/> Saiba mais
                     </a>                   
                 </div>
-                <img src={Bg1} className="scale-150" alt="" />
+                <img src={Bg1} className="scale-[2]" alt="" />
             </div>
         </div>
     </section>

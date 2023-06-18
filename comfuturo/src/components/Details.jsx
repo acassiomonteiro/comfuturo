@@ -16,14 +16,14 @@ export function Details () {
 
     return (
         
-        <div className="my-32">
+        <div className="my-56 ">
         <div className="">
-        <h1 className="font-bold text-5xl p-16 text-center">Perguntas frequentes</h1>
+        <h1 className="font-bold text-5xl text-center">Perguntas frequentes</h1>
 
         <div className="flex justify-center">
   <div className="font-normal divide-y text-center">
     <details className="mb-10">
-      <summary className="font-bold text-xl flex items-center" onClick={() => alternarExibicao(1)}>
+      <summary className="font-bold text-xl mt-16 flex items-center" onClick={() => alternarExibicao(1)}>
         O que é um teste vocacional?
         {exibirConteudo[1] ? (
           <MinusCircle className="ml-auto text-violet-500" />
@@ -31,7 +31,7 @@ export function Details () {
           <PlusCircle className="ml-auto text-violet-500" />
         )}
       </summary>
-      <p className='max-w-2xl ml-10 text-lg'>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
         Bateu aquela dúvida sobre qual carreira seguir e qual faculdade prestar? O teste vocacional é uma ferramenta que ajuda estudantes a descobrir suas aptidões e seu tipo de personalidade, avaliando habilidades, nível de percepção, raciocínio e memória. Fácil de ser realizado, o teste vocacional é amplamente utilizado por estudantes que não sabem qual carreira seguir ou têm dúvidas sobre o melhor curso de acordo com suas habilidades.
       </p>
     </details>
@@ -45,6 +45,9 @@ export function Details () {
           <PlusCircle className="ml-96 text-violet-500" />
         )}
       </summary>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
+        A definir
+      </p>
     </details>
 
     <details className="mb-10">
@@ -56,6 +59,9 @@ export function Details () {
           <PlusCircle className="ml-auto text-violet-500" />
         )}
       </summary>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
+        A definir
+      </p>
     </details>
 
     <details className="mb-10">
@@ -67,6 +73,9 @@ export function Details () {
           <PlusCircle className="ml-auto text-violet-500" />
         )}
       </summary>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
+        A definir
+      </p>
     </details>
 
     <details className="mb-10">
@@ -78,6 +87,9 @@ export function Details () {
           <PlusCircle className="ml-auto text-violet-500" />
         )}
       </summary>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
+        A definir
+      </p>
     </details>
 
     <details className="">
@@ -89,6 +101,9 @@ export function Details () {
           <PlusCircle className="ml-auto text-violet-500" />
         )}
       </summary>
+      <p className='max-w-2xl ml-10 text-lg text-justify mt-4 mb-16'>
+        A definir
+      </p>
     </details>
   </div>
 </div>

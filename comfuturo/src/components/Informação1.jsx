@@ -4,11 +4,11 @@ import Bg4 from "../img/profissão.svg";
 
 export function Informação1 () {
     return (
-    <div>
-        <div className="relative w-full h-auto left-0 -top-6 bg-[#9874FF]">
-            <h1 className="text-white font-bold text-4xl text-center">Conheça o passo a passo do teste vocacional:</h1>
+    <div className=" ">
+        <div className="relative w-full h-auto ">
+            <h1 className="text-black font-bold text-4xl mt-32 text-center">Conheça o passo a passo do nosso teste vocacional:</h1>
 
-        <div className="max-w-md mx-auto bg-violet-900 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
+        <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
             <div className="md:flex">
                 <div className="md:shrink-0">
                     <img src={Bg2} className="h-44 w-full object-cover md:h-full md:w-72 scale-75" alt="" />
@@ -20,8 +20,8 @@ export function Informação1 () {
             </div>
         </div>
 
-        <div className="w-full h-auto left-0 top-3 bg-[#9874FF]">
-                <div className="max-w-md mx-auto bg-violet-900 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
+        <div className="w-full h-auto left-0 top-3 ">
+                <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
                     <div className="md:flex">
                     <div className="md:shrink-0">
                         <img src={Bg3} className="h-44 w-full object-cover md:h-full md:w-56 scale-75 ml-12" alt="" />
@@ -33,8 +33,8 @@ export function Informação1 () {
                     </div>
                 </div>
         </div>
-        <div className="w-full h-80 left-0 top-3 bg-[#9874FF]">
-                <div className="max-w-md mx-auto bg-violet-900 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
+        <div className="w-full h-80 left-0 top-3 ">
+                <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-10">
                     <div className="md:flex">
                     <div className="md:shrink-0">
                         <img src={Bg4} className="h-44 w-full object-cover md:h-full md:w-64 scale-75 ml-4" alt="" />

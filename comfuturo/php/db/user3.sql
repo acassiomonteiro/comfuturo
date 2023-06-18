@@ -58,3 +58,28 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+CREATE DATABASE IF NOT EXISTS user3;
+USE user3;
+
+CREATE TABLE IF NOT EXISTS users (
+  id int(11) NOT NULL,
+  user varchar(50) NOT NULL,
+  emai varchar(100) NOT NULL,
+  pass varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `users` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+COMMIT;
+

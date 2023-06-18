@@ -7,15 +7,17 @@ function Register() {
     const [pass2, setPass2] = useState("");
     const [error, setError] = useState("");
     const [msg, setMsg] = useState("");
-
+    
     useEffect(() => {
         setTimeout(function(){
             setMsg("");
         }, 15000);
     }, [msg]);
-
+    
     const handleInputChange = (e, type) => {
+        // Função chamada quando ocorre uma mudança nos campos de entrada (input)
         switch(type){
+            // Define os estados (states) correspondentes com base no tipo de campo de entrada
             case "user":
                 setError("");
                 setUser(e.target.value);
@@ -50,10 +52,12 @@ function Register() {
             default:
         }
     }
-
+    
     function handleSubmit(){
+        // Função chamada quando o formulário é enviado
         if(user !== "" && email !== "" && pass1 !== "" && pass2 !== ""){
-            var url = "http://localhost/react/register.php";
+            // Verifica se todos os campos foram preenchidos
+            var url = "http://localhost:5173/register";
             var headers = {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
@@ -63,6 +67,7 @@ function Register() {
                 email: email,
                 pass: pass2
             }
+            // Faz uma requisição POST para o servidor com os dados do usuário
             fetch(url, {
                 method: "POST",
                 headers: headers,
@@ -74,6 +79,7 @@ function Register() {
                 setError(err);
                 console.log(err);
             });
+            // Limpa os campos de entrada após o envio do formulário
             setUser("");
             setEmail("");
             setPass1("");
@@ -83,9 +89,10 @@ function Register() {
             setError("All fields are required!");
         }
     }
-
+    
     function checkUser(){
-        var url = "http://localhost/react/checkuser.php";
+        // Função chamada para verificar se o nome de usuário já está em uso
+        var url = "http://localhost:5173/checkuser";
         var headers = {
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -93,6 +100,7 @@ function Register() {
         var Data = {
             user: user
         }
+        // Faz uma requisição POST para o servidor para verificar o nome de usuário
         fetch(url, {
             method: "POST",
             headers: headers,
@@ -105,9 +113,10 @@ function Register() {
             console.log(err);
         });
     }
-
+    
     function checkEmail(){
-        var url = "http://localhost/react/checkemail.php";
+        // Função chamada para verificar se o e-mail já está cadastrado
+        var url = "http://localhost:5173/checkemail.php";
         var headers = {
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -115,6 +124,7 @@ function Register() {
         var Data = {
             email: email
         }
+        // Faz uma requisição POST para o servidor para verificar o e-mail
         fetch(url, {
             method: "POST",
             headers: headers,
@@ -127,12 +137,14 @@ function Register() {
             console.log(err);
         });
     }
-
+    
     function checkPassword(){
+        // Função chamada para verificar a força da senha
         if(pass1.length < 8){
             setError("Password is less than 8 characters!")
         }
     }
+    
 
 
 
@@ -143,7 +155,7 @@ function Register() {
             <div class="flex items-center justify-center px-4 py-10 bg-white sm:px-6 mt-0 ">
                 <div class="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
                      <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl text-center ">Criar sua conta na ComFuturo.</h2>
-                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="/login" title="" class="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 hover:underline focus:text-blue-700">Login</a></p>
+                    <p class="mt-3 text-base text-gray-600 text-center">já tem uma conta? faça o <a href="/login" title="" class="font-medium text-violet-500 transition-all duration-200 hover:text-violet-800 hover:underline focus:text-violet-800">Login</a></p>
 
                     <form class="mt-12">
                         <div class="space-y-5">
@@ -221,7 +233,7 @@ function Register() {
                                 <input type="checkbox" name="agree" id="agree" class="w-5 h-5 text-blue-600 bg-white border-gray-200 rounded" />
 
                                 <label for="agree" class="ml-3 text-sm font-medium text-gray-500">
-                                 Eu concordo com <a href="#" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Termos de Serviço</a> e <a href="/politica-de-privacidade" title="" class="text-blue-600 hover:text-blue-700 hover:underline">Política de Privacidade</a> <a>da ComFuturo</a>
+                                 Eu concordo com <a href="#" title="" class="text-violet-600 hover:text-violet-800 hover:underline">Termos de Serviço</a> e <a href="/politica-de-privacidade" title="" class="text-violet-600 hover:text-violet-800 hover:underline">Política de Privacidade</a> <a>da ComFuturo</a>
                                 </label>
                             </div>
 
@@ -231,7 +243,8 @@ function Register() {
                                 defaultValue="Submit"
                                 className="button"
                                 onClick={handleSubmit}
-                                class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700">
+                                class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 
+                                ">
                                 Criar conta gratuita
                                 </button>
                             </div>

@@ -1,4 +1,4 @@
-import { Footer } from '../components/footer';
+import { Footer } from '../components/Footer';
 import Linguistica from '../img/linguistica.svg'
 import Matematica from '../img/logico-matematico.svg'
 import Espacial from '../img/espacial.svg'

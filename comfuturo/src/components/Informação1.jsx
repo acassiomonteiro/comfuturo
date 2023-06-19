@@ -8,7 +8,7 @@ export function Informação1 () {
         <div className="relative w-full h-auto ">
             <h1 className="text-black font-bold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl mt-0 text-center mb-10">Conheça o passo a passo do nosso teste vocacional:</h1>
 
-        <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden sm:max-w-2xl lg:max-w-6xl">
+        <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl">
             <div className="md:flex">
                 <div className="md:shrink-0">
                     <img src={Bg2} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />
@@ -22,7 +22,7 @@ export function Informação1 () {
 
 
         <div className="w-full h-auto left-0 top-3 ">
-                <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden sm:max-w-2xl lg:max-w-6xl my-10">
+                <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl my-10">
                     <div className="md:flex">
                     <div className="md:shrink-0">
                         <img src={Bg3} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />
@@ -35,7 +35,7 @@ export function Informação1 () {
                 </div>
         </div>
         <div className="w-full h-auto left-0 top-3">
-                <div className="max-w-md mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden sm:max-w-2xl lg:max-w-6xl mt-10">
+                <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl mt-10">
                     <div className="md:flex">
                     <div className="md:shrink-0">
                         <img src={Bg4} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />

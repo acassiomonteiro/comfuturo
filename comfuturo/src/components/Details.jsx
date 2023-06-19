@@ -18,7 +18,7 @@ export function Details () {
         
         <div className="my-56 ">
         <div className="">
-        <h1 className="font-bold text-5xl text-center">Perguntas frequentes</h1>
+        <h1 className="font-bold  text-3xl sm:text-5xl text-center">Perguntas frequentes</h1>
 
         <div className="flex justify-center ">
   <div className="font-normal divide-y text-center">

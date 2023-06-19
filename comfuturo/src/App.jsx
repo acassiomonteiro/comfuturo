@@ -8,7 +8,6 @@ import Cadastro from './pages/Register'
 import Linguistica from './pages/Linguistica'
 import Politica from './pages/Policy'
 
-import Dashboard from './pages/Dashboard'
 
 function App() {
   return (

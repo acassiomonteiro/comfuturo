@@ -55,7 +55,7 @@ function Home() {
                     </a>
                     */}
                 </div>
-                <img src={Bg1} className="scale-[2.1]" alt="" />
+                <img src={Bg1} className="scale-0 lg:scale-[2.1]" alt="" />
             </div>
         </div>
     </section>

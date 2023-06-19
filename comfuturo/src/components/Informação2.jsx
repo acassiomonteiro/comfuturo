@@ -6,12 +6,12 @@ import Bg7 from "../img/image-10.svg";
 export function Informação2 () {
     return (
         <div>
-            <h1 className="text-center font-semibold text-5xl mt-32">Responda a um questionário de <span className="text-violet-500"><br />10 minutos e veja na hora os seguintes resultados:</span></h1>
+            <h1 className="text-center font-semibold text-2xl mt-32 sm:text-4xl lg:text-5xl">Responda a um questionário de <span className="text-violet-500"><br />10 minutos e veja na hora os seguintes resultados:</span></h1>
 
-        <div className="container mx-auto">
+        <div className="container mx-auto lg:-ml-auto xl:-ml-auto">
             <div className="grid grid-rows-4 grid-flow-col gap-1">
                 <div className="row-span-2 ...">
-                <h2 className="relative font-bold left-60 mt-16 text-xl">PROFISSÕES QUE MAIS COMBINAM COM VOCÊ</h2>
+                <h2 className="relative font-bold left-20 mt-16 text-xl sm:text-center">PROFISSÕES QUE MAIS COMBINAM COM VOCÊ</h2>
                 <p className="relative font-medium max-w-sm ml-60 mt-8 text-lg">
                     A partir da experiência do Com Futuro em ajudar os estudantes a se prepararem para o ENEM e encontrarem a tão sonhada universidade, nossa equipe fez um longo estudo para identificar quais cursos e profissões combinam mais com cada perfil de pessoa.
                 </p>
@@ -27,16 +27,16 @@ export function Informação2 () {
                 <p className="flex items-center gap-3 text font-semibold ml-60 mt-4 text-lg"><CheckCircle className="text-violet-500"/>Qual o salário médio de cada uma dessas profissões</p>
                 </div>
                 <div className="col-span-2 ..."></div>
-                <div className="row-span-2 col-span-2 ..."><img src={Bg5} className="ml-auto scale-75" alt="" /></div>
+                <div className="row-span-2 col-span-2 ..."><img src={Bg5} className="ml-auto scale-0 xl:scale-75" alt="" /></div>
             </div>
         </div>
 
         {/*Segunda parte da informação*/}
 
-    <div className="container mx-auto">
+    <div className="container mx-auto ml-auto sm:ml-auto">
             <div className="grid grid-rows-3 grid-flow-col gap -mt-80">
                 <div className="row-span-3 ...">
-                <img src={Bg6} className="ml-36 scale-75 -mt-96" alt="" />
+                <img src={Bg6} className="ml-36 scale-0 xl:scale-75 -mt-96" alt="" />
                 </div>
                 <div className="col-span-2 ... -mt-96 -ml-96">
                 <h2 className="relative font-bold ml-80 mt-16 text-xl">UMA ANÁLISE COMPLETA DO SEU PERFIL</h2>

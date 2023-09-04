@@ -6,7 +6,7 @@ function navbar() {
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <nav class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
-                <a href="/" title="comfuturo" class="flex">
+                <a href="/home" title="comfuturo" class="flex">
                     <img class="w-auto h-8 lg:h-10" src={Logo} alt="logo" />
                 </a>
             </div>
@@ -22,7 +22,7 @@ function navbar() {
             </button>
 
             <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                <a href="/" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-tolet-600 focus:text-violet-500"> Home </a>
+                <a href="/home" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-tolet-600 focus:text-violet-500"> Home </a>
 
                 <a href="/cursos" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-violet-500 focus:text-violet-500"> Cursos </a>
 

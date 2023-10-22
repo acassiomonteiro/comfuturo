@@ -5,6 +5,8 @@ import Espacial from '../img/espacial.svg'
 import Musical from '../img/musical.svg'
 import Corporal from '../img/corporal-cinestesica.svg'
 import Intrapessoal from '../img/intrapessoal.svg'
+import Interpessoal from '../img/interpessoal.svg'
+import Naturalista from '../img/naturalista.svg'
 
 function Cursos() {
   return (
@@ -93,7 +95,7 @@ function Cursos() {
             <div class="overflow-hidden bg-white rounded shadow">
                 <div class="p-8">
                     <div class="flex items-center">
-                        <img class="flex-shrink-0 w-12 h-auto" src={Intrapessoal} alt="" />
+                        <img class="flex-shrink-0 w-12 h-auto" src={Interpessoal} alt="" />
                         <div class="ml-5 mr-auto">
                             <p class="text-xl font-semibold text-black">Interpessoal</p>
                         </div>
@@ -105,7 +107,7 @@ function Cursos() {
             <div class="overflow-hidden bg-white rounded shadow">
                 <div class="p-8">
                     <div class="flex items-center">
-                        <img class="flex-shrink-0 w-12 h-auto" src={Intrapessoal} alt="" />
+                        <img class="flex-shrink-0 w-12 h-auto" src={Naturalista} alt="" />
                         <div class="ml-5 mr-auto">
                             <p class="text-xl font-semibold text-black">Naturalista</p>
                         </div>
@@ -120,7 +122,7 @@ function Cursos() {
         </div>
 
         <div class="my-16 text-center">
-            <a href="#" title="" class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Saiba mais sobre qual é a sua inteligência. Preparamos um resumo que pode ajudar a identificá-la. </a>
+            <a href="#" title="" class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">  </a>
         </div>
     </div>
     

@@ -13,7 +13,7 @@ function Home() {
             <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 py-[125px]">
                 <div>
                     <p className="text-base font-semibold tracking-wider text-purple-600 uppercase">Venha descobrir qual carreira combina com você!</p>
-                    <h1 className="mt-4 text-4x1 font-bold text-black lg:mt-8 sm:text-6xl xl:text-7xl">Qual carreira dá<br/> match comigo?</h1>
+                    <h1 className="mt-4 text-4x1 leading-loose font-bold text-black lg:mt-8 sm:text-6xl xl:text-6xl ">Transformando a Educação por meio da Inteligência Artificial</h1>
                     
                     <div className="flex flex-nowrap">
                     <div className="flex -space-x-4 overflow-hidden mt-14 w-1/3">

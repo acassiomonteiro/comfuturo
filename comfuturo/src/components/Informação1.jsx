@@ -4,7 +4,7 @@ import Bg4 from "../img/profissão.svg";
 
 export function Informação1 () {
     return (
-    <div className="-mt-100 sm:-mt-96 lg:mt-10">
+    <div className="-mt-100 sm:-mt-96 lg:mt-10 overflow-x-hidden">
         <div className="relative w-full h-auto ">
 
             <h1 className="text-black font-bold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl mt-0 text-center mb-10"><span className="text-violet-500">Eficiência educacional</span> na prática </h1>

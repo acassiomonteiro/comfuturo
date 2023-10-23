@@ -2,7 +2,7 @@ import Bg1 from "../img/img-nova.svg";
 
 export function Informação3 () {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <div className="">
                 <div className="flex justify-center py-32">
                     <h1 className="text-5xl font-bold" >Como a <span className="text-violet-500">ComFuturo</span> pode te ajudar</h1>

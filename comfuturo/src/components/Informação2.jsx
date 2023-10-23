@@ -3,7 +3,7 @@ import Bg1 from "../img/Character.svg";
 export function Informação2 () {
     return (
 
-        <div className="flex justify-center w-full h-auto left-0 -top-6 bg-[#9874FF]">
+        <div className="flex justify-center w-full h-auto left-0 -top-6 bg-[#9874FF] overflow-x-hidden">
             <div className="flex items-center">
                 <div className="flex justify-center ">
                     <img src={Bg1} alt="teste" className="pb-20 pt-20"/>

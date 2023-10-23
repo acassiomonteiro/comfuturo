@@ -16,7 +16,7 @@ export function Details () {
 
     return (
         
-        <div className="my-56 ">
+        <div className="my-56 overflow-x-hidden">
         <div className="">
         <h1 className="font-bold  text-3xl sm:text-5xl text-center">Perguntas frequentes</h1>
 

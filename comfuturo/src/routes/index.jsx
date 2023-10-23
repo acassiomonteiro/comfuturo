@@ -10,6 +10,7 @@ import Sobre from '../pages/Sobre'
 import Linguistica from '../pages/Linguistica'
 import Politica from '../pages/Policy'
 import Usuario from '../pages/usuario'
+import Chatai from '../pages/chatai'
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -30,6 +31,7 @@ const RoutesApp = () => {
         <Route path="/sobre" element={<Sobre/>}/>
         <Route path="/linguistica" element={<Linguistica/>}/>
         <Route path="/politica-de-privacidade" element={<Politica/>}/>
+        <Route path="/chat" element={<Chatai/>}/>
       </Routes>
     </Fragment>
   );

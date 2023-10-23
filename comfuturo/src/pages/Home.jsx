@@ -12,8 +12,8 @@ function Home() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 py-[125px]">
                 <div>
-                    <p className="text-base font-semibold tracking-wider text-purple-600 uppercase">Venha descobrir qual carreira combina com você!</p>
-                    <h1 className="mt-4 text-4x1 leading-loose font-bold text-black lg:mt-8 sm:text-6xl xl:text-6xl ">Transformando a Educação por meio da Inteligência Artificial</h1>
+                    <p className="text-base font-semibold tracking-wider text-purple-600 uppercase">Aprenda Melhor com a Ajuda da IA</p>
+                    <h1 className="mt-4 text-4x1 leading-loose font-bold text-black lg:mt-8 sm:text-6xl xl:text-6xl ">Transformando a <span className="text-violet-500">Educação</span> por meio da <span className="text-violet-500">Inteligência Artificial</span></h1>
                     
                     <div className="flex flex-nowrap">
                     <div className="flex -space-x-4 overflow-hidden mt-14 w-1/3">
@@ -46,7 +46,7 @@ function Home() {
 
 
 
-                    <a href="#" title="" className="inline-flex items-center px-16 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-500 rounded-lg lg:mt-16 hover:bg-violet-700 focus:bg-violet-700" role="button">
+                    <a href="" title="" className="inline-flex items-center px-16 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-500 rounded-lg lg:mt-16 hover:bg-violet-700 focus:bg-violet-700" role="button">
                         Teste agora!
                     </a>
                     {/*

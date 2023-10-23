@@ -4,49 +4,73 @@ import Bg4 from "../img/profissão.svg";
 
 export function Informação1 () {
     return (
-    <div className="-mt-80 sm:-mt-96 lg:mt-10">
+    <div className="-mt-100 sm:-mt-96 lg:mt-10">
         <div className="relative w-full h-auto ">
-            <h1 className="text-black font-bold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl mt-0 text-center mb-10">Conheça o passo a passo do nosso teste vocacional:</h1>
+            <h1 className="text-black font-bold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl mt-0 text-center mb-10">Eficiência educacional na prática</h1>
 
-        <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl">
-            <div className="md:flex">
-                <div className="md:shrink-0">
-                    <img src={Bg2} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />
-                </div>
-                <div className="p-8">
-                    <div className="tracking-wide text-white font-semibold text-xl sm:text-3xl">Responda às perguntas</div>
-                    <p className="mt-2 text-white font-normal text-lg sm:text-xl max-w-2xl">Primeiro, responda às situações que o teste propõe de acordo com seu grau de interesse. A forma como você reage às atividades ajuda a moldar seu perfil.</p>
-                </div>
-            </div>
-        </div>
+        
+            <section>
+                <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
+                  <div class="grid w-full grid-cols-1 mx-auto lg:grid-cols-3">
+                    <div class="max-w-md p-6 mx-auto">
+                      <div class="flex items-center justify-center w-12 h-12 text-black bg-gray-50 rounded-xl">
+                        ❖
+                      </div>
+                      <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Inteligencia Artificial ao seu favor
+                      </p>
+                      <p class="mt-3 text-base text-gray-500">
+                        Utilizamos os mais avançados
+                        sistemas de IA para desenvolver
+                        um percurso 100% personalizado
+                        de aprendizagem adaptado ao
+                        seu perfil, momento escolar e
+                        interesses.
 
+                      </p>
+                    </div>
+                    <div class="max-w-md p-6 mx-auto">
+                      <div class="flex items-center justify-center w-12 h-12 text-black bg-gray-50 rounded-xl">
+                        ❖
+                      </div>
+                      <p class="mt-5 text-lg font-medium leading-6 text-black">
+                      Otimizado para a Base Curricular Brasileira
 
-        <div className="w-full h-auto left-0 top-3 ">
-                <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl my-10">
-                    <div className="md:flex">
-                    <div className="md:shrink-0">
-                        <img src={Bg3} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />
+                      </p>
+                      <p class="mt-3 text-base text-gray-500">
+                        Muito além de interagir com bots
+                        genéricos, como o ChatGPT.
+                        Estudar com a ComFuturo significa ter
+                        a certeza de estar aprendendo
+                        com base no curriculo escolar
+                        e/ou para o ENEM.
+
+                      </p>
                     </div>
-                    <div className="p-8">
-                        <div className="tracking-wide text-white font-semibold text-xl sm:text-3xl">Direcione seu perfil</div>
-                        <p className="mt-2 text-white font-normal text-lg sm:text-xl max-w-2xl">Segundo, escolha as palavras que melhor representam quem você é. Vamos propor alguns conjuntos de palavras para você escolher aquelas que têm a sua pegada.</p>
+                    <div class="max-w-md p-6 mx-auto">
+                      <div class="flex items-center justify-center w-12 h-12 text-black bg-gray-50 rounded-xl">
+                        ❖
+                      </div>
+                      <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Nao precisa instalar nada
+
+                      </p>
+                      <p class="mt-3 text-base text-gray-500">
+                        A ComFuturo funciona pelo 
+                        nosso propio site, facilitando
+                        assim para o usuario com seu estudo.
+                        Qualquer duivida ou ideia de
+                        conversa, é só chamar a Comfuturo
+                        que vocé terá a resposta. 24h por
+                        dia, 7 dias por semana.
+
+                      </p>
                     </div>
-                    </div>
+            
+                  </div>
                 </div>
-        </div>
-        <div className="w-full h-auto left-0 top-3">
-                <div className="mx-auto bg-violet-600 rounded-xl shadow-md overflow-hidden max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-6xl mt-10">
-                    <div className="md:flex">
-                    <div className="md:shrink-0">
-                        <img src={Bg4} className="w-full object-cover md:h-full md:w-48 sm:scale-75 scale-[0.8]" alt="" />
-                    </div>
-                    <div className="p-8">
-                        <div className="tracking-wide text-white font-semibold text-xl sm:text-3xl">Descubra profissões</div>
-                        <p className="mt-2 text-white font-normal text-lg sm:text-xl max-w-2xl">Por fim, baixe as sugestões de carreiras que são a sua cara de acordo com seu perfil primário e secundário. Conheça ainda a base psicológica por trás do teste.</p>
-                    </div>
-                    </div>
-                </div>
-        </div>
+              </section>
+            
  
     </div>
 </div>        

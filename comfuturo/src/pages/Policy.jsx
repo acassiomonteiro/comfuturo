@@ -2,50 +2,93 @@ import React from 'react'
 
 function Policy() {
   return (
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
-    <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
-        <h2 class="text-3xl text-center font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">Política de Privacidade</h2>
-        <p className=' text-gray-800 text-center sm:text-4xl lg:text-2xl'>Atualizado pela última vez em 17 de junho de 2023.</p>
+    <section class="py-10 bg-white sm:py-16 2xl:py-24">
+    <div class="max-w-6xl px-4 mx-auto sm:px-6 2xl:px-8">
+        <h2 class="text-3xl text-center font-bold leading-tight text-gray-800 sm:text-4xl 2xl:text-5xl">Política de Privacidade</h2>
+        <p className=' text-gray-600 mt-5 text-center sm:text-4xl 2xl:text-2xl'>Seus dados são importantes para a gente. Abaixo você<br></br> encontra informações adicionais sobre nossos serviços.</p>
 
-        <div class="flow-root mt-12 sm:mt-16">
-            <div class="divide-y divide-gray--200 -my-62">
-                <div class="py-9">
-                    <p class="text-2xl font-semibold text-black">Olá, seja bem-vindo a Comfuturo!</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">A Comfuturo respeita o direito à privacidade e zela pela segurança dos dados pessoais de seus usuários e, por isso, apresentamos nossa Política de Privacidade, aplicável aos websites, aplicativos, dos ambientes virtuais de aprendizado e demais soluções e serviços(juntos, a “Plataforma”), onde descrevemos como coletamos, armazenamos e utilizamos os dados pessoais dos usuários.</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">Ao acessar, usar ou navegar por nossa Plataforma, você está sujeito ao tratamento de dados pessoais nos termos apresentados nesta Política de Privacidade. Se você não concordar com a Política de Privacidade, não utilize os serviços da Comfuturo.</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">A Política de Privacidade é válida para todos os usuários de nossa Plataforma.</p>
-                    <p class="text-2xl font-semibold text-black mt-8">1. Dados pessoais coletados</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">1.1. Nós podemos coletar dados pessoais de diversas formas, tanto virtualmente quanto fisicamente. Os dados pessoais podem ser coletados:</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">
-                        <li>Quando você preenche um formulário.</li>
-                        <li>Quando você realiza seu cadastro conosco.</li>
-                        <li>Quando você posta uma mensagem nos fóruns, nos grupos, no nosso sistema de mensagens ou entra em contato conosco.</li>
-                        <li>Quando você realiza o pagamento e faz sua matrícula para nossos cursos.</li>
-                        <li>Quando você assiste às aulas, faz as atividades e avaliações do curso escolhido.</li>
-                    </p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">1.2. As categorias de dados pessoais coletados incluem:</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">Dados de cadastro e contato do usuário. Esses dados são necessários para entrar em contato com você, criar seu cadastro, realizar opagamento, concluir sua matrícula, fornecer adequadamente nossos serviços e manter nosso relacionamento. Os dados podem incluir:</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">
-                        <li>Nome, e-mail, telefone, endereço, telefone, dados de pagamento, RG, CPF, data de nascimento, gênero, etc.</li>
-                    </p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">Dados de identificação digital. São informações digitais, geralmente coletadas de forma automática, que identificam o usuário durante a navegação na Plataforma, utilizadas para melhorar a performance e qualidade dos serviços, garantir a segurança cibernética da Plataforma e cumprir exigências legais. Os dados podem incluir:</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">
-                        <li>Endereço IP, informações sobre o dispositivo do usuário (sistema operacional, navegador, etc.), cookies, geolocalização, etc.</li>
-                    </p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">Dados de utilização do serviço. Esses dados estão relacionados aos nossos serviços e são originados a partir da sua utilização. Os dados podem incluir:</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">
-                        <li>Nome do curso em que o usuário está matriculado, quantidade de aulas assistidas, tarefas concluídas, avaliações e notas, progresso total, certificado, etc.</li>
-                    </p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">Dados oriundos de terceiros. São informações do usuário que recebemos por meio de terceiros que prestam serviços ao Descomplica, como serviço de validação de cadastro, etc.</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">1.3. Nosso servidor não coleta automaticamente nenhuma informação sobre o domínio ou endereço de e-mail de nossos visitantes.</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">1.4. Ao fornecer informações através das nossa Plataforma, o usuário está sujeito às condições de coleta, uso, armazenamento e compartilhamento de dados pessoais de acordo com esta Política de Privacidade.</p>
-                    <p class="mt-16 text-justify text-2xl text-gray-600">1.5. O Descomplica não coleta ou solicita dados pessoalmente identificáveis de crianças, exceto quando permitido e sempre de acordo com a respectiva legislação.</p>
-                    
-                </div>
+    
+        <h1 class="text-3xl  mt-20 font-bold leading-tight text-gray-800 sm:text-4xl 2xl:text-5xl">Termos de Uso</h1>
+
+        <h2 class="text-2xl mt-20 font-semibold mb-2">Aceitação dos Termos:</h2>
+        <p>
+            O aceite aos presentes Termos e à Política de Privacidade incidente sobre os serviços disponibilizados na Plataforma se dará por meio do clique do Usuário no botão de aceite, quando de seu primeiro acesso à Plataforma. Caso o Usuário não concorde com qualquer disposição constante destes documentos, deverá se abster de utilizar a Plataforma. Certifique-se de ler e entender completamente estes termos antes de utilizar a plataforma.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Elegibilidade:</h2>
+        <p>
+            Para utilizar a plataforma ComFuturo, você deve ter pelo menos 13 anos de idade e possuir celular com acesso à internet e ao um navegador e possuir a capacidade legal para aceitar estes Termos de Uso.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Atualizações:</h2>
+        <p>
+            As Provedoras poderão disponibilizar novas funcionalidades na Plataforma, de forma remunerada ou gratuita. Caso haja qualquer alteração substancial nestes Termos, o Usuário será notificado pelos canais de relacionamento.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Sobre a Plataforma</h2>
+        <p>
+            ComFuturo é uma inovadora plataforma educacional que emprega inteligência artificial para auxiliar alunos do ensino Fundamental e Médio a reter conteúdo escolar e se preparar para exames de entrada universitária. Através de tutoria interativa, atividades personalizadas e análise de conhecimento, a ComFuturo oferece uma compreensão clara das áreas de força e fraqueza dos alunos, permitindo um aprendizado focado e eficaz. Além do apoio escolar, a plataforma se destaca por sua capacidade de personalizar a comunicação e compartilhar conteúdo com base nos perfis e interesses dos usuários, tornando o aprendizado uma experiência mais engajadora. Com a possibilidade de explorar além do conteúdo escolar tradicional, como finanças pessoais e autoconhecimento, a ComFuturo é uma fusão engenhosa de educação e entretenimento.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Parceiros e Provedores de Tecnologia</h2>
+        <p>
+            Utilizamos a API GPT-3.5 da OpenAI para potencializar a tutoria de Ensino. 
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Contas de Usuário:</h2>
+        <p>
+            Os usuários podem criar uma conta fornecendo informações verdadeiras e atualizadas. É responsabilidade do usuário manter a confidencialidade de suas credenciais de login. 
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Condições de Uso:</h2>
+        <p>
+            Os usuários devem utilizar a plataforma de maneira ética, respeitando as leis locais e internacionais, e não podem usar a ComFuturo para propagar conteúdo ofensivo ou prejudicial.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Direitos de Propriedade Intelectual:</h2>
+        <p>
+            Todo o conteúdo disponibilizado na plataforma ComFuturo, exceto o conteúdo criado pelos usuários, é propriedade da ComFuturo ou de seus licenciadores, e é protegido por leis de propriedade intelectual.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-4 mb-2 text-gray-800">Limitações de Responsabilidade:</h2>
+        <p>
+            A plataforma ComFuturo utiliza Inteligência Artificial Generativa, que pode, ocasionalmente, gerar informações imprecisas ou incorretas. Embora nos esforcemos para garantir a precisão e a confiabilidade das informações fornecidas, não podemos garantir a exatidão de cada informação gerada pela IA. Encorajamos os usuários a exercerem seu próprio julgamento e a verificarem as informações obtidas através da plataforma. Se você identificar qualquer informação imprecisa ou incorreta, solicitamos que reporte a ocorrência para nossa equipe através dos canais de suporte disponíveis na plataforma, para que possamos corrigir o erro e melhorar a qualidade da plataforma ComFuturo. A ComFuturo não será responsável por quaisquer danos ou prejuízos resultantes do uso da plataforma, dentro do máximo permitido pela lei aplicável.
+        </p>
+
+        <h2 class="text-3xl  mt-20 font-bold leading-tight text-gray-800 sm:text-4xl 2xl:text-5xl">Política de Privacidade:</h2>
+        <h3 class="text-2xl mt-20 font-semibold mt-2 mb-1 text-gray-800">Coleta de Dados:</h3>
+        <p>
+            Coletamos dados pessoais como nome, endereço de e-mail, telefone, ano escolar e histórico de uso para proporcionar uma experiência melhor e mais personalizada na plataforma ComFuturo.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-4 mb-1 text-gray-800">Uso de Dados:</h3>
+        <p>
+            Os dados coletados são utilizados para personalizar o conteúdo, fornecer suporte ao usuário e melhorar a eficiência da plataforma.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-4 mb-1 text-gray-800">Compartilhamento de Dados:</h3>
+        <p>
+            A ComFuturo pode compartilhar dados com terceiros confiáveis, como fornecedores de serviços técnicos, para garantir o funcionamento adequado da plataforma.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-4 mb-1 text-gray-800">Segurança dos Dados:</h3>
+        <p>
+            A ComFuturo, juntamente com todos os nossos parceiros e provedores de tecnologia, está em conformidade com as normas e regulamentações de proteção de dados estabelecidas pela Lei Geral de Proteção de Dados (LGPD) no Brasil e pelo Regulamento Geral de Proteção de Dados (GDPR) na Europa. Estamos comprometidos em garantir a segurança e a privacidade dos dados de nossos usuários, adotando medidas rigorosas para proteger as informações pessoais e assegurar o exercício dos direitos dos titulares dos dados conforme estabelecido nessas legislações.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-4 mb-1 text-gray-800">Direitos dos Usuários:</h3>
+        <p>
+            Os usuários têm o direito de acessar, corrigir ou deletar seus dados pessoais a qualquer momento, entrando em contato com a equipe de suporte da ComFuturo.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-4 mb-1 text-gray-800">Cookies e Tecnologias Similares:</h3>
+        <p>
+            Utilizamos cookies e tecnologias similares para coletar informações sobre como os usuários interagem com a plataforma e para melhorar a experiência do usuário.
+        </p>
+
+
 
             </div>
-        </div>
-    </div>
 </section>
 
   )

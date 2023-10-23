@@ -122,7 +122,7 @@ function Cursos() {
         </div>
 
         <div class="my-16 text-center">
-            <a href="#" title="" class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">  </a>
+            <a href="https://querobolsa.com.br/cursos-e-faculdades" title="" class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Conheça quais são você pode optar em cada area!</a>
         </div>
     </div>
     

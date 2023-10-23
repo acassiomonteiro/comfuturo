@@ -6,6 +6,7 @@ import { Informação1 } from "../components/informação1";
 import { Informação2 } from "../components/Informação2";
 import { Informação3 } from "../components/Informação3";
 import { Pagamento } from "../components/Pagamento";
+import { Forms } from "../components/Forms";
 
 function Home() { 
   return (
@@ -48,6 +49,8 @@ function Home() {
     <Informação3 />
 
     <Pagamento />
+
+    <Forms />
 
     {/*pergunta frequentes*/}
 

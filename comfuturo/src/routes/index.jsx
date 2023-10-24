@@ -10,7 +10,7 @@ import Sobre from '../pages/Sobre'
 import Linguistica from '../pages/Linguistica'
 import Politica from '../pages/Policy'
 import Usuario from '../pages/usuario'
-import Chatai from '../pages/chatai'
+import Chatai from "../pages/chatai";
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();

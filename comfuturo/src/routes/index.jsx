@@ -32,6 +32,7 @@ const RoutesApp = () => {
         <Route path="/linguistica" element={<Linguistica/>}/>
         <Route path="/politica-de-privacidade" element={<Politica/>}/>
         <Route path="/chat" element={<Chatai/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </Fragment>
   );

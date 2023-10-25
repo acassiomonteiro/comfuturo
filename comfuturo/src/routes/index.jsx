@@ -11,6 +11,7 @@ import Linguistica from '../pages/Linguistica'
 import Politica from '../pages/Policy'
 import Dashboard from '../pages/Dashboard'
 import Chatai from "../pages/chatai";
+import Usuario from "../pages/Usuario";
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -32,6 +33,7 @@ const RoutesApp = () => {
         <Route path="/linguistica" element={<Linguistica/>}/>
         <Route path="/politica-de-privacidade" element={<Politica/>}/>
         <Route path="/chat" element={<Chatai/>}/>
+        <Route path="/usuario" element={<Usuario/>}/>
       </Routes>
     </Fragment>
   );

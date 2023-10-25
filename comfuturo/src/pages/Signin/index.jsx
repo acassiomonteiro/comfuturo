@@ -26,7 +26,7 @@ const Signin = () => {
       return;
     }
 
-    navigate("/usuario");
+    navigate("/perfil");
   };
 
   return (

@@ -9,7 +9,7 @@ import Cursos from '../pages/Cursos'
 import Sobre from '../pages/Sobre'
 import Linguistica from '../pages/Linguistica'
 import Politica from '../pages/Policy'
-import Usuario from '../pages/usuario'
+import Dashboard from '../pages/Dashboard'
 import Chatai from "../pages/chatai";
 
 const Private = ({ Item }) => {
@@ -23,7 +23,7 @@ const RoutesApp = () => {
     <Fragment>
       <Navbar/>
       <Routes>
-      <Route exact path="/usuario" element={<Private Item={Usuario} />} />
+      <Route exact path="/perfil" element={<Private Item={Dashboard} />} />
        <Route path="/home" element={<Home/>} />
         <Route path="/login" element={<Signin />} />
         <Route path="/cadastro" element={<Signup />} />

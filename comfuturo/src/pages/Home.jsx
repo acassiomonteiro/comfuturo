@@ -2,7 +2,7 @@ import { ArrowDownCircle } from "lucide-react";
 import Bg1 from "../img/banner.svg";
 import { Details } from "../components/Details";
 import { Footer } from "../components/Footer";
-import { Informação1 } from "../components/informação1";
+import { Informação1 } from "../components/Informação1";
 import { Informação2 } from "../components/Informação2";
 import { Informação3 } from "../components/Informação3";
 import { Pagamento } from "../components/Pagamento";
@@ -12,11 +12,11 @@ function Home() {
   return (
     <div className="bg-white">
     <section className="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24 overflow-x-hidden">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 py-[125px]">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-7">
+            <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 py-[85px]">
                 <div>
                     
-                    <h1 className="mt-4 text-4xl leading-loose font-bold text-black lg:mt-8 sm:text-6xl xl:text-6xl ">Transformando a <span className="text-violet-500">Educação</span> por meio da <span className="text-violet-500">Inteligência Artificial</span></h1>
+                    <h1 className="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-6xl/tight ">Transformando a <span className="text-violet-500">Educação</span> por meio da <span className="text-violet-500">Inteligência Artificial</span></h1>
                     
                     <div className="flex flex-nowrap">
                     
@@ -28,7 +28,7 @@ function Home() {
 
 
 
-                    <a href="" title="" className="inline-flex items-center px-16 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-500 rounded-lg lg:mt-16 hover:bg-violet-700 focus:bg-violet-700" role="button">
+                    <a href="#preços" title="" className="inline-flex items-center px-16 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-500 rounded-lg lg:mt-16 hover:bg-violet-700 focus:bg-violet-700" role="button">
                         Teste agora!
                     </a>
                  

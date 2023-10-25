@@ -11,7 +11,7 @@ export function Pagamento () {
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto text-center">
             
-            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Plano e Preços</h2>
+            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" id="preços">Plano e Preços</h2>
         </div>
 
         <div class="grid max-w-3xl grid-cols-1 gap-6 mx-auto mt-8 sm:mt-16 sm:grid-cols-2">
@@ -52,7 +52,7 @@ export function Pagamento () {
                     </ul>
 
                     <div className="mt-10">
-                    <a href="#" title="" class="inline-flex items-center justify-center w-full px-4 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-600 rounded-md hover:bg-violet-800 focus:bg-violet-800" role="button"> Quero o plano básico </a>
+                    <a href="#cadastro-chat" title="" class="inline-flex items-center justify-center w-full px-4 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-600 rounded-md hover:bg-violet-800 focus:bg-violet-800" role="button"> Quero o plano básico </a>
                     </div>
 
                 </div>
@@ -99,7 +99,7 @@ export function Pagamento () {
                     </ul>
 
                     <div className="mt-10">
-                    <a href="#" title="" class="inline-flex items-center justify-center w-full px-4 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-600 rounded-md hover:bg-violet-800 focus:bg-violet-800" role="button"> Quero o plano premium </a>
+                    <a href="#cadastro-chat" title="" class="inline-flex items-center justify-center w-full px-4 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-violet-600 rounded-md hover:bg-violet-800 focus:bg-violet-800" role="button"> Quero o plano premium </a>
                     </div>
 
 

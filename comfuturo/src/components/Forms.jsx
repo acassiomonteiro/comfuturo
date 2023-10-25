@@ -1,6 +1,6 @@
 export function Forms () {
     return ( 
-        <div className="flex justify-center w-full h-auto left-0 -top-6 bg-[#9874FF] overflow-x-hidden">
+        <div className="flex justify-center w-full h-auto left-0 -top-6 bg-[#9874FF] overflow-x-hidden" id="cadastro-chat">
              <div className="flex items-center">
                 <div className="flex justify-center flex-col">
                     <h2 className="text-white mb-4"><span className="text-5xl font-bold">A revolução <br></br>na aprendizagem chegou.</span></h2>
@@ -47,13 +47,13 @@ export function Forms () {
                                     </div>
 
                                     <div>
-                                        <label for="" class="font-medium text-white text-xl"> Email</label>
+                                        <label for="email" class="font-medium text-white text-xl"> Email</label>
                                         <div class="text-white">
                                             
 
                                             <input
                                                 type="email"
-                                                name=""
+                                                name="email-cadastro"
                                                 id=""
                                                 placeholder="exemplo@gmail.com"
                                                 class="w-full py-4 pl-3 pr-80 text-white placeholder-white transition-all duration-200 bg-transparent border border-white rounded-3xl focus:outline-none focus:border-gray-200 caret-gray-200"
@@ -67,8 +67,8 @@ export function Forms () {
                                             
 
                                             <input
-                                                type="number"
-                                                name=""
+                                                type="text"
+                                                name="telefone-cadastro"
                                                 id=""
                                                 placeholder="(98) 9 9999-9999"
                                                 class="w-full py-4 pl-3 pr-80 text-white placeholder-white transition-all duration-200 bg-transparent border border-white rounded-3xl focus:outline-none focus:border-gray-200 caret-gray-200"

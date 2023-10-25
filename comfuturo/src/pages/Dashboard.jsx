@@ -15,10 +15,14 @@ function logoutSubmit(){
 }
 
 return(
+
+  
+     
     <div className="form">
         <h3>Dashboard Page</h3>
         <p onClick={logoutSubmit}>Logout</p>
     </div>
+
 );
 
 }

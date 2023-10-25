@@ -1,4 +1,4 @@
-import { Footer } from "../components/footer.jsx";
+import { Footer } from "../components/Footer.jsx";
 function Sobre() {
 	return (
 		<section className="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">

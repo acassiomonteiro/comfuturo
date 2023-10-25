@@ -30,7 +30,7 @@ function Usuario() {
       try {
         const API_URL = "https://api.openai.com/v1/chat/completions";
         // Substitua 'YOUR_API_KEY' pelo seu próprio API Key
-        const API_KEY = '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';
+        const API_KEY = 'GERAR CHAVE';
   
         const requestOptions = {
           method: 'POST',

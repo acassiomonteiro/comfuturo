@@ -20,7 +20,7 @@ export function Footer () {
             <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/comfuturo_/"
                   rel="noreferrer"
                   target="_blank"
                   class="text-white transition hover:text-violet-950"
@@ -43,7 +43,7 @@ export function Footer () {
     
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/comfuturo_/"
                   rel="noreferrer"
                   target="_blank"
                   class="text-white transition hover:text-violet-950"
@@ -66,7 +66,7 @@ export function Footer () {
     
               <li>
                 <a
-                  href="/"
+                  href="https://www.instagram.com/comfuturo_/"
                   rel="noreferrer"
                   target="_blank"
                   class="text-white transition hover:text-violet-950"
@@ -108,7 +108,7 @@ export function Footer () {
                 <li>
                   <a
                     class="text-white transition hover:text-gray-700/75"
-                    href="/"
+                    href="/sobre"
                   >
                     Conheça o time
                   </a>
@@ -125,7 +125,7 @@ export function Footer () {
                     class="text-white transition hover:text-gray-700/75"
                     href="/"
                   >
-                    Aprendizado Móvel
+                    Aprendizado com IA
                   </a>
                 </li>
     
@@ -134,7 +134,7 @@ export function Footer () {
                     class="text-white transition hover:text-gray-700/75"
                     href="/"
                   >
-                    Orientação Educacional Personalizada
+                    Acompanhamento Educacional Personalizada
                   </a>
                 </li>
   
@@ -148,7 +148,7 @@ export function Footer () {
                 <li>
                   <a
                     class="text-white transition hover:text-gray-700/75"
-                    href="/"
+                    href="#faq"
                   >
                     FAQs
                   </a>

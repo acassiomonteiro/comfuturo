@@ -1,4 +1,6 @@
-import Bg1 from "../img/img-nova.svg";
+import Bg1 from "../img/student_boy.jpg";
+import Bg2 from "../img/mockup.jpg";
+import Bg3 from "../img/student.jpg";
 
 export function Informação3 () {
     return (
@@ -15,14 +17,14 @@ export function Informação3 () {
                             <p className="text-black text-xl max-w-md">Oferecemos atividades de aprendizado, projetadas para atender às suas necessidades exclusivas. Não importa em que estágio de aprendizado você esteja, nossas atividades o levarão ao próximo nível.</p>
                         </div>
                         <div className="flex justify-center">
-                            <img src={Bg1} alt="teste" className=""/>
+                            <img src={Bg1} alt="teste" className="scale-75"/>
                         </div>
                     </div>
 
                     <div>
                         <div className="flex justify-center items-center">
                             <div className="flex justify-center">
-                                <img src={Bg1} alt="teste" className=""/>
+                                <img src={Bg2} alt="teste" className="scale-100"/>
                             </div>
                             <div className="px-10">
                                 <h1 className="text-black font-bold text-3xl py-4 max-w-md">Conversa com a IA <span className="text-violet-500">- Seu Mentor Virtual</span></h1>
@@ -38,7 +40,7 @@ export function Informação3 () {
                                 <p className="text-black text-xl max-w-md">Mantenha o controle do seu progresso com nossa análise de desempenho. Saiba onde você brilha e quais áreas precisam de atenção. Esteja sempre um passo à frente na sua jornada educacional.</p>
                             </div>
                             <div className="flex justify-center">
-                                <img src={Bg1} alt="teste" className=""/>
+                                <img src={Bg3} alt="teste" className="scale-100"/>
                             </div>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ export function Footer () {
             <p
               class="mt-6 max-w-md text-center leading-relaxed text-white sm:max-w-xs sm:text-left"
             >
-              Ajudamos jovens a escolher o curso superior perfeito! Descubra seu potencial e construa o futuro dos seus sonhos com a Comfuturo
+              Quem deseja ter acesso ao nosso método inovador, impulsionado pela inteligência artificial, está pronto para trilhar um caminho de aprendizado personalizado e transformador.
             </p>
     
             <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
@@ -125,7 +125,7 @@ export function Footer () {
                     class="text-white transition hover:text-gray-700/75"
                     href="/"
                   >
-                    Teste vocacional
+                    Aprendizado Móvel
                   </a>
                 </li>
     
@@ -134,7 +134,7 @@ export function Footer () {
                     class="text-white transition hover:text-gray-700/75"
                     href="/"
                   >
-                    Orientação profissional
+                    Orientação Educacional Personalizada
                   </a>
                 </li>
   

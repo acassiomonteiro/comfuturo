@@ -36,7 +36,7 @@ const Signup = () => {
 
   return (
     <C.Container>
-      <C.Label>Castro da ComFuturo</C.Label>
+      <C.Label>Cadastro da ComFuturo</C.Label>
       <C.Content>
         <Input
           type="email"
@@ -61,7 +61,7 @@ const Signup = () => {
         <C.LabelSignin>
           Já tem uma conta?
           <C.Strong>
-            <Link to="/login">&nbsp;Entre</Link>
+            <Link to="/chat">&nbsp;Entre</Link>
           </C.Strong>
         </C.LabelSignin>
       </C.Content>

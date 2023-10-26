@@ -1,65 +1,140 @@
-import React from 'react'
-
-import Bg1 from "../img/Images_ Avatars.svg";
-import Bg2 from "../img/button-submit.svg";
+import React, { useState, useEffect } from 'react';
+import Bg1 from '../img/Images_ Avatars.svg';
+import Bg2 from '../img/button-submit.svg';
+import Icon from '../img/icon-comfuturo.svg';
 import { Footer } from '../components/Footer';
 
-function Chatai()
+function Chatai() {
+    const [messages, setMessages] = useState([
+      {
+        role: 'system',
+        content: 'Oii, seja muito bem-vindo! Eu sou a IA da Comfuturo. 😊 Como posso lhe ajudar?',
+      },
+    ]);
+    const [inputMessage, setInputMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const userRole = 'user';
+    const assistantRole = 'assistant';
+  
+    const sendMessage = (message, role) => {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role, content: message },
+      ]);
+      setInputMessage('');
+    };
+  
+    const fetchResponseFromAPI = async (message) => {
+      setIsLoading(true); // Ativar o estado de carregamento
+  
+      try {
+        const API_URL = "https://api.openai.com/v1/chat/completions";
+        // Substitua 'YOUR_API_KEY' pelo seu próprio API Key
+        const API_KEY = 'GERAR CHAVE';
+  
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: userRole, content: message }],
+          }),
+        };
+  
+        const response = await fetch(API_URL, requestOptions);
+        const data = await response.json();
+        const assistantResponse = data.choices[0].message.content;
+  
+        // Adicione a resposta da API às mensagens
+        sendMessage(assistantResponse, assistantRole);
+      } catch (error) {
+        console.error('Erro ao enviar mensagem para a API:', error);
+        // Adicione uma mensagem de erro
+        sendMessage('Opa! Algo deu errado. Tente novamente.', assistantRole);
+      } finally {
+        setIsLoading(false); // Desativar o estado de carregamento
+      }
+    };
+  
+    const handleSendClick = () => {
+      if (inputMessage.trim() === '') return;
+      sendMessage(inputMessage, userRole);
+      fetchResponseFromAPI(inputMessage); // Enviar mensagem para a API
+    };
 
-{
   return (
     <div>
-       <div class=" bottom-0 right-0 mb-4 mr-4">
-        <div className='flex justify-center py-14'>
-            <h1 className='text-4xl font-bold text-'>Aprenda do <span className='text-violet-500'>seu</span> jeito!</h1>
+      <div className="bottom-0 right-0 mb-4 mr-4">
+        <div className="flex justify-center py-14">
+          <h1 className="text-4xl font-bold">
+            Aprenda do <span className="text-violet-500">seu</span> jeito!
+          </h1>
         </div>
-    </div>
+      </div>
 
-    <div id="" class="flex justify-center pb-32">
-        <div class=" bg-white rounded-lg max-w-5xl w-full">
-            <div class="p-4 border-b bg-violet-500 text-white rounded-t-lg flex gap-4 items-center">
-                <button id="" class="text-gray-300 hover:text-gray-400 focus:outline-none focus:text-gray-400">
-                    X
-                </button>
-                <img src={Bg1} alt="foto de perfil" />
-                <p class="text-lg font-semibold">Comfuturo</p>
-                <a class="" href="/perfil">perfil</a>
-                
-            </div>
-            <div id="" class="p-5 h-auto overflow-y-auto">
-              <div class="mb-2 text-right">
-                <p class="bg-violet-500 text-white py-2 px-4 inline-block rounded-tl-2xl rounded-bl-2xl rounded-br-2xl">E ae, ComFuturo</p>
-              </div>
-              
-              <div class="mb-2 text-right">
-                <p class="bg-violet-500 text-white py-2 px-4 inline-block rounded-tl-2xl rounded-bl-2xl rounded-br-2xl">Me diz o que foi a Era Vargas</p>
-              </div>
-              
-              <div class="mb-2">
-                <p class="bg-gray-100 text-gray-700 py-2 px-4 inline-block rounded-bl-2xl rounded-br-2xl rounded-tr-2xl max-w-xl">A Era Vargas refere-se a um período significativo na história do Brasil que abrange os anos em que Getúlio Vargas ocupou cargos de destaque no governo do país. A Era Vargas pode ser dividida em dois principais períodos:<br></br>
-
-              <br></br>1. Governo Provisório (1930-1934): A Era Vargas teve início em 1930, quando Getúlio Vargas liderou um movimento político-militar que resultou na queda do governo de Washington Luís. Após esse golpe, Vargas assumiu o cargo de Chefe do Governo Provisório, que mais tarde foi transformado em uma presidência de fato. Durante esse período, Getúlio Vargas implementou várias reformas, incluindo a promulgação de uma nova Constituição em 1934.
-              <br></br>2. Estado Novo (1937-1945): Em 1937, Vargas dissolveu o Congresso Nacional,
-              suspendeu a Constituição e instaurou o </p>
-              </div>
-              
-            </div>
-            <div class="relative p-4 border-t flex">
-                <input id="" type="text" placeholder="Mensagem" class="w-full px-4 py-3 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-violet-500"/>
-                <button id="    " class="absolute right-0 text-white px-6 py-1.5 rounded-r-md">
-                  <img src={Bg2} alt="" />
-                </button>
-            </div>
+      <div className="flex justify-center pb-32">
+        <div className="p-4 border-b bg-violet-500 text-white rounded-t-lg flex gap-1 items-center">
+          <button className="text-gray-300 hover:text-gray-400 focus:outline-none focus:text-gray-400">
+            <a href="/home">X</a>
+          </button>
+          <img src={Bg1} alt="foto de perfil" />
+          <p className="text-lg font-semibold">Comfuturo</p>
         </div>
+        <div className="bg-white rounded-lg max-w-5xl w-full">
+          <div className="p-7 mb-96 h-auto overflow-y-auto">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`${
+                  message.role === userRole
+                    ? 'mb-6 text-right'
+                    : message.role === assistantRole
+                    ? 'mb-6 text-left'
+                    : ''
+                }`}
+              >
+                {message.role === userRole ? (
+                  <p className="bg-violet-500 text-white py-2 px-4 inline-block rounded-tl-2xl rounded-bl-2xl rounded-br-2xl">
+                    {message.content}
+                  </p>
+                ) : (
+                  <p className="bg-gray-100  text-gray-700 py-2 px-4 inline-block rounded-bl-2xl rounded-br-2xl rounded-tr-2xl">
+                    {message.content}
+                  </p>
+                )}
+              </div>
+            ))}
+            {isLoading && ( // Exibir "carregando..." enquanto estiver carregando
+              <div className="text-left text-gray-500 py-2">
+                Carregando...
+              </div>
+            )}
+          </div>
+          <div className="relative p-4 border-t flex">
+            <input
+              id=""
+              type="text"
+              placeholder="Digite sua mensagem..."
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              className="w-full px-4 py-3 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-violet-500"
+            />
+            <button
+              id="send-btn"
+              onClick={handleSendClick}
+              className="absolute right-0 text-white px-6 py-1.5 rounded-r-md"
+            >
+              <img src={Bg2} alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
-
-    <Footer />
-
-    </div>
-
-    
-
-  )
+  );
 }
 
 export default Chatai

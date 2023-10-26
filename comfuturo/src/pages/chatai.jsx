@@ -30,7 +30,7 @@ function Chatai() {
       try {
         const API_URL = "https://api.openai.com/v1/chat/completions";
         // Substitua 'YOUR_API_KEY' pelo seu próprio API Key
-        const API_KEY = 'GERAR CHAVE';
+        const API_KEY = 'CHAVE DA API';
   
         const requestOptions = {
           method: 'POST',
@@ -84,7 +84,7 @@ function Chatai() {
           <p className="text-lg font-semibold">Comfuturo</p>
         </div>
         <div className="bg-white rounded-lg max-w-5xl w-full">
-          <div className="p-7 mb-96 h-auto overflow-y-auto">
+          <div className="p-7 mb-80 h-auto overflow-y-auto">
             {messages.map((message, index) => (
               <div
                 key={index}

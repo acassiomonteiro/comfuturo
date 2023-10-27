@@ -26,7 +26,7 @@ const Signin = () => {
       return;
     }
 
-    navigate("/perfil");
+    navigate("/chat");
   };
 
   return (

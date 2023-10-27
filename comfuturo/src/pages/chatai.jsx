@@ -30,7 +30,7 @@ function Chatai() {
       try {
         const API_URL = "https://api.openai.com/v1/chat/completions";
         // Substitua 'YOUR_API_KEY' pelo seu próprio API Key
-        const API_KEY = 'CHAVE DA API';
+        const API_KEY = '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';
   
         const requestOptions = {
           method: 'POST',

@@ -5,63 +5,65 @@ import Icon from '../img/icon-comfuturo.svg';
 import { Footer } from '../components/Footer';
 
 function Chatai() {
-  const [messages, setMessages] = useState([
-    {
-      role: 'system',
-      content: 'Oii, seja muito bem-vindo! Eu sou a IA da Comfuturo. 😊 Como posso lhe ajudar?',
-    },
-  ]);
-  const [inputMessage, setInputMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const userRole = 'user';
-  const assistantRole = 'assistant';
-
-  const sendMessage = (message, role) => {
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { role, content: message },
+    const [messages, setMessages] = useState([
+      {
+        role: 'system',
+        content: 'Oii, seja muito bem-vindo! Eu sou a IA da Comfuturo. 😊 Como posso lhe ajudar?',
+      },
     ]);
-    setInputMessage('');
-  };
-
-  const fetchResponseFromAPI = async (message) => {
-    setIsLoading(true);
-
-    try {
-      const API_URL = "https://api.openai.com/v1/chat/completions";
-      const API_KEY = 'CHAVE DA API';
-
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
-          messages: [{ role: userRole, content: message }],
-        }),
-      };
-
-      const response = await fetch(API_URL, requestOptions);
-      const data = await response.json();
-      const assistantResponse = data.choices[0].message.content;
-
-      sendMessage(assistantResponse, assistantRole);
-    } catch (error) {
-      console.error('Erro ao enviar mensagem para a API:', error);
-      sendMessage('Opa! Algo deu errado. Tente novamente.', assistantRole);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleSendClick = (e) => {
-    e.preventDefault();
-    if (inputMessage.trim() === '') return;
-    sendMessage(inputMessage, userRole);
-    fetchResponseFromAPI(inputMessage);
-  };
+    const [inputMessage, setInputMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const userRole = 'user';
+    const assistantRole = 'assistant';
+  
+    const sendMessage = (message, role) => {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role, content: message },
+      ]);
+      setInputMessage('');
+    };
+  
+    const fetchResponseFromAPI = async (message) => {
+      setIsLoading(true); // Ativar o estado de carregamento
+  
+      try {
+        const API_URL = "https://api.openai.com/v1/chat/completions";
+        // Substitua 'YOUR_API_KEY' pelo seu próprio API Key
+        const API_KEY = 'CHAVE DA API';
+  
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: userRole, content: message }],
+          }),
+        };
+  
+        const response = await fetch(API_URL, requestOptions);
+        const data = await response.json();
+        const assistantResponse = data.choices[0].message.content;
+  
+        // Adicione a resposta da API às mensagens
+        sendMessage(assistantResponse, assistantRole);
+      } catch (error) {
+        console.error('Erro ao enviar mensagem para a API:', error);
+        // Adicione uma mensagem de erro
+        sendMessage('Opa! Algo deu errado. Tente novamente.', assistantRole);
+      } finally {
+        setIsLoading(false); // Desativar o estado de carregamento
+      }
+    };
+  
+    const handleSendClick = () => {
+      if (inputMessage.trim() === '') return;
+      sendMessage(inputMessage, userRole);
+      fetchResponseFromAPI(inputMessage); // Enviar mensagem para a API
+    };
 
   return (
     <div>
@@ -105,30 +107,28 @@ function Chatai() {
                 )}
               </div>
             ))}
-            {isLoading && (
+            {isLoading && ( // Exibir "carregando..." enquanto estiver carregando
               <div className="text-left text-gray-500 py-2">
                 Carregando...
               </div>
             )}
           </div>
           <div className="relative p-4 border-t flex">
-            <form onSubmit={handleSendClick} className="w-full">
-              <input
-                id=""
-                type="text"
-                placeholder="Digite sua mensagem..."
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                className="w-full px-4 py-3 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-violet-500"
-              />
-              <button
-                id="send-btn"
-                type="submit"
-                className="absolute right-0 text-white px-6 py-1.5 rounded-r-md"
-              >
-                <img src={Bg2} alt="" />
-              </button>
-            </form>
+            <input
+              id=""
+              type="text"
+              placeholder="Digite sua mensagem..."
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              className="w-full px-4 py-3 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-violet-500"
+            />
+            <button
+              id="send-btn"
+              onClick={handleSendClick}
+              className="absolute right-0 text-white px-6 py-1.5 rounded-r-md"
+            >
+              <img src={Bg2} alt="" />
+            </button>
           </div>
         </div>
       </div>
@@ -137,4 +137,4 @@ function Chatai() {
   );
 }
 
-export default Chatai;
+export default Chatai
